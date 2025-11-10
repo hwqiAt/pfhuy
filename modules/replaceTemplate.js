@@ -10,10 +10,27 @@ module.exports = (temp, project) => {
   let output = temp.replace(/{%PROJECTNAME%}/g, project.projectName);
 
   output = output.replace(/{%TECHNOLOGIES%}/g, `${techList}`);
-  output = output.replace(/{%GITHUBLINK%}/g, project.githubLink);
-  output = output.replace(/{%DEMOLINK%}/g, project.demoLink);
-  output = output.replace(/{%DESCRIPTION%}/g, project.description);
-  output = output.replace(/{%ID%}/g, project.id);
 
+  output = output.replace(/{%DESCRIPTION%}/g, project.description);
+
+  project.done
+    ? (output = output.replace(
+        /{%STATUS%}/g,
+        `  <a
+    class="card__link"
+    href="${project.demoLink}"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span>DEMO<i class="emoji-right">🤟</i></span></a>`
+      ))
+    : (output = output.replace(
+        /{%STATUS%}/g,
+        `  <a
+    class="card__link"
+    href="#"
+    pointer-events: none; >
+    <span>In Progress<i class="emoji-right">👨‍💻</i></span></a>`
+      ));
   return output;
 };

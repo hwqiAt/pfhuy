@@ -5,6 +5,7 @@
     "image": "📰",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "projectMembers": "1",
+    "done": true,
     "demoLink": "https://lnhwqi.github.io/ZNewsClone/",
     "description": "Clone Zingnews page using HTML, CSS and JavaScript."
   },
@@ -21,7 +22,25 @@
       "MongoDB"
     ],
     "projectMembers": "1",
+    "done": true,
     "demoLink": "https://yatodos-web.vercel.app/",
     "description": "Clone Yatodos page using TypeScript, Javascript, React, Nodejs, Express, MongoDB."
+  },
+  {
+    "id": 1,
+    "projectName": "Titan",
+    "image": "📃",
+    "technologies": [
+      "TypeScript",
+      "Javascript",
+      "React",
+      "Nodejs",
+      "Express",
+      "MongoDB"
+    ],
+    "projectMembers": "1",
+    "done": false,
+    "demoLink": "",
+    "description": "Ecommerce website for Thesis - HCMIU"
   }
 ]
